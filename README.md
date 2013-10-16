@@ -1,40 +1,21 @@
-Connect Device to Internet
-Plug in fiber (do we have to open a hatch like Calix ONT?).
-Device accesses Internet, reports in and registers self (why? where?) and does a query to find out lots of things.
+Picco-Frontend
+==============
 
-Power On
-Is there anything user needs to capture from sticker, card, RTFM before plug in? Is an App needed? Example: typical practice is reading the SSID and a password from serialized sticker on bottom of device.
+This Repository hosts work-in-progress frontend html/javascript/css for the PiccoPod personal Server.
 
-Device does POST.
+in BootStrap/
 
-Connect to Device
-Wired? Wireless? How to insure no invaders cop the signal at moment of vulnerability? Will the SSID be open? Secure? Both?
+*Choose.html/Login.html - Prompt for choosing/entering a passphrase
+*full-slider.html - Skeleton interface for PiccoPods
 
 
-“Hello House”
-(One time only setup before Welcome Home)
-Prompts:
-1: Confirm Time of Day, Date and Location via user input
-2: RTFM for PiccoPod Key and unlock Device
-3: Choose new key passphrase (generate crypto key)
-4: add client device to recognized devices 
-5: forward to Welcome Home
+Full-slider.html
+================
 
-Welcome Home
--Default Welcome screen appears
--Welcome to the PiccoPod
-	1. Create/access Personal Pod?
-	2. Create/access Shared Pod?
-	3. Create/access Public Pod?
-		
-MVP/Demo Features:
-1. Learn to Store
-2. Learn to Share
-3. Learn to Search
+Currently Populated with "template pods", giving a brief description of the types of pods available
 
-Welcome Visitors:
-“POD Warming Party”
-1. Gain access to PiccoPod (perhaps you are in a Pod of Trust).
-2. Start action to Store, Share or Search
-3. Leave your bit of “Information Potluck.”
-4. Eat some “Information Potluck.”
+*Private - Safe, accessible, just for you
+*Trusted - For You and your trusted peers
+*Public - Broadcast to the world
+
+These placeholders will be repopulated with real user pods upon access of the server side REST API; each pod gets a spot on the carousel and a menu item in the sidebar. When accessed, the <div> below the Pod-Header (still within its respective carousel item) will serve as a stream container for content relevant to that pod, as well as an input option for that pod. 
