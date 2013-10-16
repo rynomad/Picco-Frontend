@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!-- Side Menu -->
+    <a id="menu-toggle" href="#menu" class="btn btn-primary btn-lg toggle"><i class="icon-reorder"></i></a>
+    <div id="sidebar-wrapper">
+      <ol class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="icon-remove"></i></a>
+        <li class="sidebar-brand"><a href="http://startbootstrap.com">PiccoPods</a></li>
+        <li data-target="#myCarousel" data-slide-to="0"><a href="#private">Private</a></li>
+        <li data-target="#myCarousel" data-slide-to="1"><a href="#trusted">Trusted</a></li>
+        <li data-target="#myCarousel" data-slide-to="2"><a href="#public">Public</a></li>
+      </ol>
+    </div>
+    <!-- /Side Menu -->
+
+    <div class="header">
+      <div id="myCarousel" class="carousel slide">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div id="private" class="item active">
+	    <div id="top" class="header">
+              <div class="vert-text"> 
+                    <img src="img/safe.svg"> <br>
+                    <h2>Private Pod</h2>
+                    <p>Your Private Pod is a secure, accessible place for the information  that's important to you</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="trusted" class="item">
+           <div id="top" class="header">
+              <div class="vert-text"> 
+                                <img src="img/Handshake.png" height="25%" width="16%"> 
+                    <h2>Trusted Pods</h2>
+                    <p>Your Trusted Pods are places for you to share with those you trust</p>
+              </div>
+            </div>
+
+              
+            
+          </div>
+          <div id="public" class="item">
+           <div id="top" class="header">
+              <div class="vert-text"> 
+                    <img src="img/publicpod.png" height="25%" width="16%"> <br>
+                    <h2>Public Pods</h2>
+                    <p>Your Public Pods are places for you to share with the world</p>
+              </div>
+            </div>
+
+              
+            
+          </div>
+
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jqueryFileTree.js"></script>
+    <!-- Custom JavaScript for the Side Menu - Put in a custom JS file if you want to clean this up -->
+    <script>
+	$(document).ready(function() {      
+  	    $('.carousel').carousel('pause');
+	});
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+    <script>
+      $(function() {
+          $('a[href*=#menu]:not([href=#menu])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+                || location.hostname == this.hostname) {
+
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
+  </body>
+</html>
